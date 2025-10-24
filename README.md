@@ -37,7 +37,7 @@ This project predicts individual medical insurance costs using a trained machine
 1. From the `Medical-Cost-Prediction` directory, run:
 
 ```
-   uvicorn app.app --reload
+   uvicorn app:app --reload
 ```
 
 2. The Flask app will start and expose an endpoint for predictions (refer to `app.py` for the exact route and payload format).
@@ -47,5 +47,6 @@ Usage
 - Send a POST request with the expected JSON payload to the prediction endpoint. See `app.py` for the input fields and response format.
 
 *Notes*
+
 
 - If you update model or preprocessing code, retrain and export artifacts to the `model/` directory before running the server.

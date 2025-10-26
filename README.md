@@ -50,6 +50,20 @@ Usage
 
 Below are example requests showing how to call the prediction endpoint (`/api/predict`) with JSON input. The server (when started with the command above) listens by default at `http://127.0.0.1:8000`.
 
+### Health check
+
+Quick health check to verify the server is running. This is useful for CI, monitoring, or just to confirm the service is up before sending prediction requests.
+
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+Example response:
+
+```json
+{"status": "ok"}
+```
+
 ### curl
 
 Replace values in the JSON with the person you want to predict for. Make sure the server is running.

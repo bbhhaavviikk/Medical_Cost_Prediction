@@ -31,6 +31,12 @@ def preprocess_input(data):
 async def hey():
     return "Hey"
 
+
+@app.get("/health")
+async def health():
+    """Health check route to verify the server is running."""
+    return {"status": "ok"}
+
 @app.post("/api/predict")
 async def predict_cost(request: Request):
     try:
